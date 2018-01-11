@@ -1,4 +1,4 @@
-# CASPER theme for hugo
+# CASPER theme for hugo - modified for my need
 
 
 Casper is a single-column theme for [Hugo](http://gohugo.io/).
