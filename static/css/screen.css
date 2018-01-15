@@ -1053,6 +1053,7 @@ body:not(.post-template) .post-title {
 
 .post-title a {
     text-decoration: none;
+    color:inherit;
 }
 
 .post-excerpt p {
