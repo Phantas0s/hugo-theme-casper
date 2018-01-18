@@ -1027,6 +1027,7 @@ body.nav-opened .menu-button .word {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    color:#383838;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -1062,7 +1063,7 @@ h2.post-title {
 
 .post-title a {
     text-decoration: none;
-    color:inherit;
+    color:#383838;
 }
 
 .post-excerpt p {
