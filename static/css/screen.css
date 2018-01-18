@@ -1107,7 +1107,7 @@ h2.post-title {
     min-height: 77px;
 }
 
-.post-date {
+.post-date .post-reading-time{
     display: inline-block;
     margin-left: 8px;
     padding-left: 12px;

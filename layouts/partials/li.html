@@ -5,10 +5,13 @@
                 {{ range $index, $tag := .Params.tags }}
                     <a href="{{$.Site.BaseURL}}/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
                 {{ end }}
+                |
             {{end}}
-            <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ .Date.Format "2 Jan 2006" }}
-            </time>
+            {{ if not .Params.nodate }}
+                <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    {{ .Date.Format "2 Jan 2006" }}
+                </time>
+            {{ end }}
         </div>
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
@@ -20,6 +23,9 @@
         {{end}}
     </section>
     <footer class="post-meta">
+            {{ if not .Params.noread }}
+                    <span class="post-reading-time"><i class="fa fa-clock-o"></i> {{.ReadingTime}} min. read</span>
+            {{ end }}
         {{ if or .Params.author .Site.Params.author}}
             {{$authorname := or .Params.author .Site.Params.author }}
             {{$authoravatar := or .Params.authoravatar .Site.Params.logo }}

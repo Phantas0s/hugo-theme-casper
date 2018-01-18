@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 
-
 {{if .Params.image}}
   {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
   <header class="main-header post-head" style="background-image: url({{.Params.image}})">
@@ -12,7 +11,6 @@
 <header class="main-header post-head no-cover">
     <nav class="main-nav overlay clearfix">
 {{end}}
-
       {{ if .Site.Params.logo }}
         <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo | relURL }}" alt="Home" /></a>
       {{end}}
@@ -24,8 +22,6 @@
         {{end}}
       {{end}}
     </nav>
-
-
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{.Title}}</h1>
@@ -36,18 +32,9 @@
             </h2>
         </div>
     </div>
-
-
-
 </header>
 
-
-
 <main class="content" role="main">
-
-
-
-
   <article class="post {{ .Section }}">
     <header class="post-header">
 
@@ -65,10 +52,7 @@
 
     <section class="post-content">
 
-
 {{ .Content }}
-
-
 
 <nav class="navpage">
 
@@ -95,33 +79,25 @@
       </li>
       </ul>
       {{ end }}
-
-
-{{end}}
-{{end}}
-
-</nav>
-
-
-    </section>
-
-
-  <footer class="post-footer">
-
-
-    {{if .Site.Params.logo}}
-    <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo | relURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
-    </figure>
     {{end}}
+{{end}}
 
-    {{ partial "author.html" . }}
+    </nav>
+</section>
 
-    {{ partial "share.html" . }}
+    <footer class="post-footer">
+        {{if .Site.Params.logo}}
+        <figure class="author-image">
+            <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo | relURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
+        </figure>
+        {{end}}
 
-    {{ partial "disqus.html" . }}
+        {{ partial "author.html" . }}
 
-  </footer>
+        {{ partial "share.html" . }}
+
+        {{ partial "disqus.html" . }}
+    </footer>
 </article>
 
 </main>
