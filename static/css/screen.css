@@ -1051,9 +1051,12 @@ body:not(.post-template) .post-title {
     font-size: 3.8rem;
 }
 
+.post-header h1{
+    margin: 1rem 0.4rem 2.2rem 0;
+}
+
 h2.post-title {
     margin: 1rem 0.4rem 2.2rem 0;
-    font
 }
 
 .post-excerpt {
@@ -1272,9 +1275,8 @@ h2.post-title {
    links remain at a fixed width the whole time */
 .post-footer .share {
     position: absolute;
-    top: 6rem;
+    top: 2rem;
     right: 0;
-    width: 180px;
 }
 
 .post-footer .share a {
