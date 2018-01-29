@@ -1297,13 +1297,14 @@ h2.post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
-    min-height: 180px;
+    height: 65;
+    min-height: 300px;
+	max-width: 780px;
+	margin: 0 auto 6rem;
+	border-bottom: 1px solid #ddd;
 }
 
 .no-cover.post-head.main-header {
-    height: 85px;
-    min-height: 0;
     margin-bottom: 0;
     background: transparent;
 }
