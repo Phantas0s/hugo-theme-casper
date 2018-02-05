@@ -2038,18 +2038,17 @@ h2.post-title {
     text-decoration: none;
     position: relative;
     text-align: center;
-    color: #fff;
-    background: #222 no-repeat center center;
+    color: #bbb;
+    background: #2B2B2B no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
 .read-next-story:hover:before {
-    background: rgba(0,0,0,0.8);
+    background: #2B2B2B;
     transition: all 0.2s ease;
 }
 .read-next-story:hover .post:before {
-    color: #222;
-    background: #fff;
+    background: #222;
     transition: all 0.2s ease;
 }
 
@@ -2061,7 +2060,7 @@ h2.post-title {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.7);
+    background: #222;
     transition: all 0.5s ease;
 }
 
@@ -2088,7 +2087,7 @@ h2.post-title {
 
 .read-next-story h2 {
     margin-top: 1rem;
-    color: #fff;
+    color: #bbb;
 }
 
 .read-next-story p {
