@@ -2,18 +2,18 @@
 
 {{if .Params.cover}}
   {{if or (eq (substr .Params.cover 0 7) "http://") (eq (substr .Params.cover 0 8) "https://")}}
-    <header class="main-header tag-head" style="background-image: url({{.Params.cover}})">
+    <header class="main-header" style="background-image: url({{.Params.cover}})">
   {{ else }}
-  <header class="main-header tag-head" style="background-image: url({{.Params.cover | relURL}})">
+  <header class="main-header" style="background-image: url({{.Params.cover | relURL}})">
   {{ end }}
 {{else if .Site.Params.cover}}
     {{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
-  <header class="main-header tag-head" style="background-image: url({{.Site.Params.cover}})">
+  <header class="main-header" style="background-image: url({{.Site.Params.cover}})">
   {{ else }}
-  <header class="main-header tag-head" style="background-image: url({{.Site.Params.cover | relURL}})">
+  <header class="main-header" style="background-image: url({{.Site.Params.cover | relURL}})">
   {{ end }}
 {{else}}
-    <header class="main-header tag-head no-cover">
+    <header class="main-header no-cover">
 {{end}}
     <nav class="main-nav overlay clearfix">
       {{ if .Site.Params.logo }}
@@ -31,8 +31,8 @@
         <div class="main-header-content inner">
             <h1 class="page-title">{{.Title}}</h1>
             <h2 class="page-description">
-                {{if .Params.description}}
-                    {{.Params.description}}
+                {{if .Site.Params.description}}
+                    {{.Site.Params.description}}
                 {{end}}
             </h2>
         </div>
