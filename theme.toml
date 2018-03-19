@@ -1,4 +1,4 @@
-name = "Casper"
+name = "Webtechno"
 license = "MIT"
 licenselink = "https://github.com/vjeantet/hugo-theme-casper/blob/master/LICENSE.md"
 description = "Casper theme from Ghost Foundation"
@@ -6,6 +6,7 @@ homepage = "http://vjeantet.fr/"
 tags = ["blog"]
 features = ["disqus", "google analytics","share"]
 min_version=0.25
+googleAnalyticsUserID=UA-46898153-4
 
 [author]
   name = "Valere JEANTET"
