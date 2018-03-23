@@ -1073,8 +1073,8 @@ body.nav-opened .menu-button .word {
     box-shadow: #FFF 0 0 0 5px;
 }
 
-body:not(.post-template) .post-title {
-    font-size: 5rem;
+body:not(.post-template) .post-title h1 {
+    font-size: 3.8rem;
 }
 
 .post-header h1{
