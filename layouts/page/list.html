@@ -29,6 +29,7 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
+            {{ partial "social.html" . }}
             <h1 class="page-title">{{.Title}}</h1>
             <h2 class="page-description">
                 {{if .Site.Params.description}}
