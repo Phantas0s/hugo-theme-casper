@@ -18,3 +18,6 @@
 <meta name="twitter:description" content="{{if .IsPage}}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 <meta name="twitter:site" content="@{{ .Site.Params.twitterName }}"/>
 
+{{ if .Params.socialImage }}
+    <meta name="twitter:image" content="{{ .Params.socialImage }}"/>
+{{ end }}
