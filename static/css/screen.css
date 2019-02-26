@@ -604,6 +604,7 @@ body.nav-opened .site-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
     background-image: -o-linear-gradient(-90deg, rgba(43,43,43,0.40) 0%, rgba(43,43,43,0.50) 100%) ;
     background-image: -moz-linear-gradient(-90deg, rgba(43,43,43,0.40) 0%, rgba(43,43,43,0.50) 100%);
     background-image: -webkit-linear-gradient(-90deg, rgba(43,43,43,0.40) 0%, rgba(43,43,43,0.50) 100%);
@@ -765,7 +766,7 @@ body.nav-opened .nav {
     font-size: 1.2rem;
     vertical-align: bottom;
     color: #B8B8B8;
-    content: counter(item, lower-roman);
+    content: counter(item, circle);
     counter-increment: item;
 }
 .nav li {
@@ -780,12 +781,6 @@ body.nav-opened .nav {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-.nav li a:after {
-    display: inline-block;
-    content: " .......................................................";
-    color: rgba(255,255,255,0.2);
-    margin-left: 5px;
 }
 .nav .nav-current:before {
     color: #fff;
@@ -989,6 +984,7 @@ body.nav-opened .menu-button .word {
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
     color: #fff;
+    position: relative;
 }
 
 .page-description {
