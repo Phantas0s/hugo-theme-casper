@@ -1,52 +1,20 @@
 {{ partial "header.html" . }}
 
-{{if .Params.image}}
-  {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
-  <header class="main-header post-head" style="background-image: url({{.Params.image}})">
-  {{ else }}
-  <header class="main-header post-head" style="background-image: url({{.Params.image | relURL}})">
-  {{ end }}
-  <nav class="main-nav overlay clearfix">
-{{else}}
 <header class="main-header post-head no-cover">
-    <nav class="main-nav overlay clearfix">
-{{end}}
 
-      {{ if .Site.Params.logo }}
-        <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo | relURL }}" alt="Home" /></a>
-      {{end}}
-      {{ if .Site.Menus.main }}
-          <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-      {{else}}
-        {{ if .Site.Params.RSSLink}}
-          <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Subscribe</a>
-        {{end}}
-      {{end}}
-    </nav>
-
-    {{if eq .Params.index true}}
+  {{ if .Site.Params.logo }}
+      <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo | relURL}}" alt="Home" /></a>
+  {{end}}
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{.Title}}</h1>
-            <h2 class="page-description">
-                {{if .Params.description}}
-                    {{.Params.description}}
-                {{end}}
-            </h2>
+            <h1 class="page-title"><a href="/">{{.Title}}</a></h1>
         </div>
     </div>
-    {{end}}
-
-
 </header>
 
 
 
 <main class="content" role="main">
-
-
-
-
   <article class="post {{ .Section }}">
     <header class="post-header">
       <nav class="breadcrumb">
@@ -74,7 +42,6 @@
       </nav>
 
 
-        <h1 class="post-title">{{.Title}}</h1>
         <small>{{.Description}}</small>
 
         <section class="post-meta">
