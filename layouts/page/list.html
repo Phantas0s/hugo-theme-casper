@@ -47,7 +47,7 @@
     {{ partial "pagination.html" $paginator }}
     </div>
 
-    {{ range where $paginator.Pages "Type" "in" site.Params.mainSections}}
+    {{ range where $paginator.Pages "Type" "in" site.Params.mainSections }}
         {{ partial "li.html" . }}
     {{ end }}
 
