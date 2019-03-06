@@ -1,4 +1,9 @@
 {{ partial "header.html" . }}
+<nav class="page-nav clearfix">
+    {{ if .Site.Menus.main }}
+        <a class="menu-button" href="#">&#9776;</a>
+    {{end}}
+</nav>
 <header class="main-header post-head no-cover">
 
   {{ if .Site.Params.logo }}

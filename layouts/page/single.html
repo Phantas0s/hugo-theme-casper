@@ -1,7 +1,11 @@
 {{ partial "header.html" . }}
+<nav class="page-nav clearfix">
+    {{ if .Site.Menus.main }}
+        <a class="menu-button" href="#">&#9776;</a>
+    {{end}}
+</nav>
 
 <header class="main-header post-head no-cover">
-
   {{ if .Site.Params.logo }}
       <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo | relURL}}" alt="Home" /></a>
   {{end}}
@@ -11,8 +15,6 @@
         </div>
     </div>
 </header>
-
-
 
 <main class="content" role="main">
   <article class="post {{ .Section }}">
@@ -40,9 +42,6 @@
         {{end}}
         <!-- <li>{{.Title}}</li> -->
       </nav>
-
-
-        <small>{{.Description}}</small>
 
         <section class="post-meta">
         {{ if eq .Section "post"}}
