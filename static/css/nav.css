@@ -1,3 +1,11 @@
+.nav hr {
+    display: block;
+    height:none;
+    border: none;
+    margin: 1em 0;
+    padding: 0;
+}
+
 nav.breadcrumb{
   margin-bottom:0px;
 }
