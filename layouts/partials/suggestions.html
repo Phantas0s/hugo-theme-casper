@@ -1,10 +1,6 @@
 <aside class="read-next">
     {{ $related := .Site.RegularPages.RelatedIndices . "tags" }}
     {{ $PageNext := .NextInSection }}
-    <!-- too old version of hugo -->
-    <!-- {{ if gt (len $related) 0 }} -->
-    <!--     {{ $PageNext = index ($related) 0 }} -->
-    <!-- {{ end }} -->
     {{ with $PageNext }}
     <a class="read-next-story" style="{{ if .Params.image }}background-image: url({{ .Params.image | relURL }}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
         <section class="post">
@@ -15,9 +11,6 @@
     {{ end }}
 
     {{ $PagePrev := .NextInSection }}
-    <!-- {{ if gt (len $related) 1 }} -->
-    <!--     {{ $PagePrev = index ($related) 1 }} -->
-    <!-- {{ end }} -->
 
     {{ with $PagePrev }}
     <a class="read-next-story prev" style="{{ if .Params.image }}background-image: url({{ .Params.image  | relURL}}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
