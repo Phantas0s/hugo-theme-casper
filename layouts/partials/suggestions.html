@@ -16,6 +16,7 @@
     {{ if gt (len $related) 1 }}
         {{ $PagePrev = index ($related) 1 }}
     {{ end }}
+
     {{ with $PagePrev }}
     <a class="read-next-story prev" style="{{ if .Params.image }}background-image: url({{ .Params.image  | relURL}}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
         <section class="post">
