@@ -2220,6 +2220,28 @@ h2.post-title {
   }
 }
 
+/* ==========================================================================
+   14. Newsletter
+   ========================================================================== */
+
+.newsletter {
+    margin-top: 2em;
+    border: #EBF2F6 1px solid;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.newsletter form {
+    padding-bottom: 1.5em;
+}
+
+.newsletter input[type="submit"] {
+    font-size: 0.9em;
+}
+
+.newsletter input[type="text"] {
+    width: 16em;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff

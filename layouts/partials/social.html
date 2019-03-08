@@ -82,3 +82,9 @@
 &nbsp;
 {{end}}
 
+{{ if .Site.Params.RSSLink}}
+<a class="bloglogo" href='https://feedly.com/i/subscription/feed%2F{{.Site.BaseURL }}index.xml' target='blank'>
+        <span class="icon-feed" style="color:white;font-size:2em"></span>
+    </a>
+{{ end }}
+
