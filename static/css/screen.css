@@ -1053,7 +1053,16 @@ body.nav-opened .menu-button .word {
     transition: all 0.2s linear;
 }
 
+.tag-head .page-title > a {
+    color: #ffffff;
+}
+
+
 .page-title > a:hover, .page-title > a:focus{
+    color: #87afd7;
+}
+
+.post-meta > a:hover, .page-title > a:focus{
     color: #87afd7;
 }
 

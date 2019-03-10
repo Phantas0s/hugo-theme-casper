@@ -28,7 +28,9 @@
       {{end}}
     </nav>
     <div class="vertical">
-        <h1 class="page-title">#{{.Title}}</h1>
+        <h1 class="page-title">
+            <a href="/">#{{.Title}}</a>
+        </h1>
         <div class="main-header-content inner">
             <h2 class="page-description">
                 {{if .Params.description}}
