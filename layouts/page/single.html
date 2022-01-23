@@ -23,15 +23,15 @@
         {{ $currentNode := . }}
         {{ range .Site.Menus.main }}
         {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}
-        <li><a href="{{.URL}}">{{.Name}}</a></li>
+        <li><a href="{{.RelPermalink}}">{{.Name}}</a></li>
               {{ range .Children }}
               {{ if .HasChildren }}
               {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}
-                <li><a href="{{.URL}}">{{.Name}}</a></li>
+                <li><a href="{{.RelPermalink}}">{{.Name}}</a></li>
                   {{ range .Children }}
                   {{ if .HasChildren }}
                   {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}
-                    <li><a href="{{.URL}}">{{.Name}}</a></li>
+                    <li><a href="{{.RelPermalink}}">{{.Name}}</a></li>
                   {{end}}
                   {{end}}
                   {{end}}
@@ -67,7 +67,7 @@
     <!-- Children contents -->
 
     {{ range .Menus.main.Children }}
-    <li><a href="{{.URL}}" >{{ .Name }}</a></li>
+    <li><a href="{{.RelPermalink}}" >{{ .Name }}</a></li>
     {{ end }}
 
   </ul>
@@ -83,15 +83,15 @@
 {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}
       {{ range .Children }}
       <ul>
-      <li><a href="{{.URL}}">{{.Name}}</a>
+      <li><a href="{{.RelPermalink}}">{{.Name}}</a>
       {{ if .HasChildren }}
         <ul>
         {{ range .Children }}
-          <li><a href="{{.URL}}">{{.Name}}</a>
+          <li><a href="{{.RelPermalink}}">{{.Name}}</a>
           {{ if .HasChildren }}
             <ul>
             {{ range .Children }}
-            <li><a href="{{.URL}}">{{ .Name }}</a></li>
+            <li><a href="{{.RelPermalink}}">{{ .Name }}</a></li>
             {{ end }}
             </ul>
           {{ end }}
